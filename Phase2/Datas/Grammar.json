@@ -1,0 +1,418 @@
+{
+  "Program": [
+    [
+      "DeclarationList"
+    ]
+  ],
+  "DeclarationList": [
+    [
+      "Declaration",
+      "DeclarationList"
+    ],
+    [
+      "EPSILON"
+    ]
+  ],
+  "Declaration": [
+    [
+      "DeclarationInitial",
+      "DeclarationPrime"
+    ]
+  ],
+  "DeclarationInitial": [
+    [
+      "TypeSpecifier",
+      "ID"
+    ]
+  ],
+  "DeclarationPrime": [
+    [
+      "FunDeclarationPrime"
+    ],
+    [
+      "VarDeclarationPrime"
+    ]
+  ],
+  "VarDeclarationPrime": [
+    [
+      ";"
+    ],
+    [
+      "[",
+      "NUM",
+      "]",
+      ";"
+    ]
+  ],
+  "FunDeclarationPrime": [
+    [
+      "(",
+      "Params",
+      ")",
+      "CompoundStmt"
+    ]
+  ],
+  "TypeSpecifier": [
+    [
+      "int"
+    ],
+    [
+      "void"
+    ]
+  ],
+  "Params": [
+    [
+      "int",
+      "ID",
+      "ParamPrime",
+      "ParamList"
+    ],
+    [
+      "void"
+    ]
+  ],
+  "ParamList": [
+    [
+      ",",
+      "Param",
+      "ParamList"
+    ],
+    [
+      "EPSILON"
+    ]
+  ],
+  "Param": [
+    [
+      "DeclarationInitial",
+      "ParamPrime"
+    ]
+  ],
+  "ParamPrime": [
+    [
+      "[",
+      "]"
+    ],
+    [
+      "EPSILON"
+    ]
+  ],
+  "CompoundStmt": [
+    [
+      "{",
+      "DeclarationList",
+      "StatementList",
+      "}"
+    ]
+  ],
+  "StatementList": [
+    [
+      "Statement",
+      "StatementList"
+    ],
+    [
+      "EPSILON"
+    ]
+  ],
+  "Statement": [
+    [
+      "ExpressionStmt"
+    ],
+    [
+      "CompoundStmt"
+    ],
+    [
+      "SelectionStmt"
+    ],
+    [
+      "IterationStmt"
+    ],
+    [
+      "ReturnStmt"
+    ]
+  ],
+  "ExpressionStmt": [
+    [
+      "Expression",
+      ";"
+    ],
+    [
+      "break",
+      ";"
+    ],
+    [
+      ";"
+    ]
+  ],
+  "SelectionStmt": [
+    [
+      "if",
+      "(",
+      "Expression",
+      ")",
+      "Statement",
+      "else",
+      "Statement"
+    ]
+  ],
+  "IterationStmt": [
+    [
+      "while",
+      "(",
+      "Expression",
+      ")",
+      "Statement"
+    ]
+  ],
+  "ReturnStmt": [
+    [
+      "return",
+      "ReturnStmtPrime"
+    ]
+  ],
+  "ReturnStmtPrime": [
+    [
+      ";"
+    ],
+    [
+      "Expression",
+      ";"
+    ]
+  ],
+  "Expression": [
+    [
+      "SimpleExpressionZegond"
+    ],
+    [
+      "ID",
+      "B"
+    ]
+  ],
+  "B": [
+    [
+      "=",
+      "Expression"
+    ],
+    [
+      "[",
+      "Expression",
+      "]",
+      "H"
+    ],
+    [
+      "SimpleExpressionPrime"
+    ]
+  ],
+  "H": [
+    [
+      "=",
+      "Expression"
+    ],
+    [
+      "G",
+      "D",
+      "C"
+    ]
+  ],
+  "SimpleExpressionZegond": [
+    [
+      "AdditiveExpressionZegond",
+      "C"
+    ]
+  ],
+  "SimpleExpressionPrime": [
+    [
+      "AdditiveExpressionPrime",
+      "C"
+    ]
+  ],
+  "C": [
+    [
+      "Relop",
+      "AdditiveExpression"
+    ],
+    [
+      "EPSILON"
+    ]
+  ],
+  "Relop": [
+    [
+      "<"
+    ],
+    [
+      "=="
+    ]
+  ],
+  "AdditiveExpression": [
+    [
+      "Term",
+      "D"
+    ]
+  ],
+  "AdditiveExpressionPrime": [
+    [
+      "TermPrime",
+      "D"
+    ]
+  ],
+  "AdditiveExpressionZegond": [
+    [
+      "TermZegond",
+      "D"
+    ]
+  ],
+  "D": [
+    [
+      "Addop",
+      "Term",
+      "D"
+    ],
+    [
+      "EPSILON"
+    ]
+  ],
+  "Addop": [
+    [
+      "+"
+    ],
+    [
+      "-"
+    ]
+  ],
+  "Term": [
+    [
+      "SignedFactor",
+      "G"
+    ]
+  ],
+  "TermPrime": [
+    [
+      "SignedFactorPrime",
+      "G"
+    ]
+  ],
+  "TermZegond": [
+    [
+      "SignedFactorZegond",
+      "G"
+    ]
+  ],
+  "G": [
+    [
+      "*",
+      "SignedFactor",
+      "G"
+    ],
+    [
+      "EPSILON"
+    ]
+  ],
+  "SignedFactor": [
+    [
+      "+",
+      "Factor"
+    ],
+    [
+      "-",
+      "Factor"
+    ],
+    [
+      "Factor"
+    ]
+  ],
+  "SignedFactorPrime": [
+    [
+      "FactorPrime"
+    ]
+  ],
+  "SignedFactorZegond": [
+    [
+      "+",
+      "Factor"
+    ],
+    [
+      "-",
+      "Factor"
+    ],
+    [
+      "FactorZegond"
+    ]
+  ],
+  "Factor": [
+    [
+      "(",
+      "Expression",
+      ")"
+    ],
+    [
+      "ID",
+      "VarCallPrime"
+    ],
+    [
+      "NUM"
+    ]
+  ],
+  "VarCallPrime": [
+    [
+      "(",
+      "Args",
+      ")"
+    ],
+    [
+      "VarPrime"
+    ]
+  ],
+  "VarPrime": [
+    [
+      "[",
+      "Expression",
+      "]"
+    ],
+    [
+      "EPSILON"
+    ]
+  ],
+  "FactorPrime": [
+    [
+      "(",
+      "Args",
+      ")"
+    ],
+    [
+      "EPSILON"
+    ]
+  ],
+  "FactorZegond": [
+    [
+      "(",
+      "Expression",
+      ")"
+    ],
+    [
+      "NUM"
+    ]
+  ],
+  "Args": [
+    [
+      "ArgList"
+    ],
+    [
+      "EPSILON"
+    ]
+  ],
+  "ArgList": [
+    [
+      "Expression",
+      "ArgListPrime"
+    ]
+  ],
+  "ArgListPrime": [
+    [
+      ",",
+      "Expression",
+      "ArgListPrime"
+    ],
+    [
+      "EPSILON"
+    ]
+  ]
+}
