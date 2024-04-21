@@ -1,0 +1,32 @@
+/*==== Sample 2 =====*/
+int foo(int x){
+	int a;
+	a = 10;
+	output(x);
+	if(a < x){
+		return(0-1);
+	}
+	else {
+		return(0-2);
+	}
+}
+void main ( void )
+{
+	int a;
+    int b;
+    int c;
+
+	int i;
+	i = foo (4) ;
+	output (i);
+
+	a = 5;
+    b = 3;
+    c = a + b;
+    if(c < 5){
+    output(b - a);
+    } else {
+    output(c * 2);
+    }
+
+}
